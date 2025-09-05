@@ -1,144 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gourmet Table</title>
+    <title>El Peruano Vegano</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>The Gourmet Table</h1>
-        <nav>
-            <ul>
-                <li><a href="#appetizers">Appetizers</a></li>
-                <li><a href="#main-courses">Main Courses</a></li>
-                <li><a href="#desserts">Desserts</a></li>
-                <li><a href="#drinks">Drinks</a></li>
-            </ul>
-        </nav>
+        <div class="top-bar">
+            <div class="lang-toggle">
+                <a href="#" class="active">ES</a> / <a href="#">EN</a>
+            </div>
+        </div>
+        <div class="header-content">
+            <h1>El Peruano Vegano</h1>
+            <p>Cocina Plant-Based con Sabor!</p>
+        </div>
     </header>
 
+    <nav class="category-nav">
+        <button data-category="bebidas" class="category-tab">Bebidas</button>
+        <button data-category="entrantes" class="category-tab active">Entrantes</button>
+        <button data-category="platos-principales" class="category-tab">Platos Principales</button>
+    </nav>
+
     <main>
-        <section id="appetizers">
-            <h2>Appetizers</h2>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Bruschetta</h3>
-                    <p>Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.</p>
-                    <p class="price">$12</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Calamari</h3>
-                    <p>Lightly fried squid served with a spicy marinara sauce.</p>
-                    <p class="price">$15</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Stuffed Mushrooms</h3>
-                    <p>Mushroom caps filled with a savory blend of breadcrumbs, herbs, and cheese.</p>
-                    <p class="price">$14</p>
+        <section id="bebidas" class="menu-section" style="display: none;">
+            <h2>Bebidas</h2>
+            <div class="dish-card">
+                <img src="https://via.placeholder.com/400x200" alt="Chicha Morada">
+                <div class="dish-card-body">
+                    <div class="dish-card-header">
+                        <h3>Chicha Morada</h3>
+                        <span class="price">$5</span>
+                    </div>
+                    <p class="description">Bebida tradicional de maíz morado, especias y frutas.</p>
+                    <div class="dish-card-footer">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="main-courses">
-            <h2>Main Courses</h2>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Filet Mignon</h3>
-                    <p>8oz center-cut filet, cooked to perfection, served with mashed potatoes and asparagus.</p>
-                    <p class="price">$45</p>
+        <section id="entrantes" class="menu-section">
+            <h2>Entrantes</h2>
+            <div class="dish-card">
+                <img src="https://via.placeholder.com/400x200" alt="Ceviche de Champiñones">
+                <div class="dish-card-body">
+                    <div class="dish-card-header">
+                        <h3>Ceviche de Champiñones</h3>
+                        <span class="price">$14</span>
+                    </div>
+                    <p class="description">Champiñones marinados en leche de tigre, con camote y choclo.</p>
+                    <div class="dish-card-footer">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Grilled Salmon</h3>
-                    <p>Fresh Atlantic salmon, grilled and served with a lemon-dill sauce and roasted vegetables.</p>
-                    <p class="price">$32</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Pasta Primavera</h3>
-                    <p>A medley of fresh vegetables and pasta in a light garlic and olive oil sauce.</p>
-                    <p class="price">$25</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="desserts">
-            <h2>Desserts</h2>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Tiramisu</h3>
-                    <p>A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
-                    <p class="price">$10</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>New York Cheesecake</h3>
-                    <p>Rich and creamy cheesecake with a graham cracker crust, topped with your choice of fruit.</p>
-                    <p class="price">$9</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Chocolate Lava Cake</h3>
-                    <p>Warm chocolate cake with a gooey molten center, served with vanilla ice cream.</p>
-                    <p class="price">$11</p>
+            <div class="dish-card">
+                <img src="https://via.placeholder.com/400x200" alt="Papa a la Huancaína">
+                <div class="dish-card-body">
+                    <div class="dish-card-header">
+                        <h3>Papa a la Huancaína</h3>
+                        <span class="price">$12</span>
+                    </div>
+                    <p class="description">Papas cocidas bañadas en una cremosa salsa de ají amarillo vegana.</p>
+                    <div class="dish-card-footer">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="drinks">
-            <h2>Drinks</h2>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>House Wine</h3>
-                    <p>A selection of red and white wines from our house collection.</p>
-                    <p class="price">$8/glass</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Craft Cocktails</h3>
-                    <p>Expertly mixed cocktails using premium spirits and fresh ingredients.</p>
-                    <p class="price">$16</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="img-placeholder"></div>
-                <div class="menu-item-details">
-                    <h3>Soft Drinks</h3>
-                    <p>A variety of sodas, juices, and iced teas.</p>
-                    <p class="price">$4</p>
+        <section id="platos-principales" class="menu-section" style="display: none;">
+            <h2>Platos Principales</h2>
+            <div class="dish-card">
+                <img src="https://via.placeholder.com/400x200" alt="Lomo Saltado Vegano">
+                <div class="dish-card-body">
+                    <div class="dish-card-header">
+                        <h3>Lomo Saltado Vegano</h3>
+                        <span class="price">$22</span>
+                    </div>
+                    <p class="description">Tiras de seitán salteadas con cebolla, tomate y papas fritas. Servido con arroz.</p>
+                    <div class="dish-card-footer">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>Contact us: (123) 456-7890 | info@thegourmettable.com</p>
-        <p>
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
-        </p>
-    </footer>
+    <div class="floating-cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count">0</span>
+    </div>
 
     <script src="script.js"></script>
 </body>
